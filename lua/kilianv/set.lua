@@ -1,9 +1,11 @@
+vim.g.mapleader = " "
+
 vim.opt.nu = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.expandtab = true
+vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
@@ -27,4 +29,7 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80,100"
 
-vim.g.mapleader = " "
+vim.opt.list = true
+vim.opt.listchars = "eol:↵,tab:→·,lead:·,trail:·,nbsp:⍽,extends:◣,precedes:◢"
+
+vim.opt.timeout = false

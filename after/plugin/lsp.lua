@@ -19,14 +19,20 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 	["<C-Space>"] = cmp.mapping.complete(),
 })
 
--- lsp.set_preferences({
--- 	sign_icons = { }
--- })
+
+lsp.set_sign_icons({
+  error = '✘',
+  warn = '▲',
+  hint = '⚑',
+  info = '»',
+})
 
 -- only runs when lsp server is attached to buffer
 lsp.on_attach(function(client, bufnr)
-	-- only set keymaps in current buffer 
+	-- only set keymaps in current buffer
 	local opts = { buffer = bufnr, remap = false }
+
+	vim.keymap.set("n", "gl", "g_", opts)
 
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
 	vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
