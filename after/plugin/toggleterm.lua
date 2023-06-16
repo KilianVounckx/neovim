@@ -2,7 +2,7 @@ require("toggleterm").setup({
   open_mapping = "<leader>t",
   hide_numbers = true, -- hide the number column in toggleterm buffers
   shade_filetypes = {},
-  start_in_insert = true,
+  start_in_insert = false,
   insert_mappings = true, -- whether or not the open mapping applies in insert mode
   terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
   persist_size = true,
