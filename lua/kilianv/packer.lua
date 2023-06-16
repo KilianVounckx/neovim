@@ -57,4 +57,11 @@ return require("packer").startup(function(use)
             require("toggleterm").setup()
         end,
     }
+
+    use {
+        "numToStr/Comment.nvim",
+        config = function()
+            require("Comment").setup()
+        end,
+    }
 end)
