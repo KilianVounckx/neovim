@@ -1,7 +1,7 @@
 " Language:    Roc
 " Maintainer:  Kilian Vounckx <kilianvounckx@hotmail.be>
 " License:     MIT
-" Last revision: 2023 Jun 17
+" Latest Revision: 2023 Jun 17
 
 if exists("b:current_syntax")
   finish
