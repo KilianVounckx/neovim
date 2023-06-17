@@ -1,16 +1,16 @@
 " Language:    Roc
 " Maintainer:  Kilian Vounckx <kilianvounckx@hotmail.be>
 " License:     MIT
+" Last revision: 2023 Jun 17
 
-" Bail if our syntax is already loaded.
-" if exists('b:current_syntax') && b:current_syntax == 'roc'
-"   finish
-" endif
+if exists("b:current_syntax")
+  finish
+endif
 
 " Roc keywords
 syn keyword rocKeyword as dbg expect crash interface app package platform
 syn keyword rocKeyword hosted exposes imports with generates packages requires provides to
-"TODO expect-fx
+" TODO expect-fx
 
 " Roc keywords for conditional expressions
 syn keyword rocConditionalKeyword if then else when is
@@ -50,10 +50,10 @@ syn match rocOperator /&&/
 syn match rocOperator /||/
 
 " Comments
-syn match rocComment /\#[^#].*\|\#/ contains=rocTodo
+syn match rocComment /\(\#[^#].*\|\#\)$/ contains=rocTodo
 
 " Doc comments
-syn match rocDocComment /\#\#.*/
+syn match rocDocComment /\#\#.*$/
 
 " Todo in comments
 syn keyword rocTodo TODO contained
