@@ -1,5 +1,5 @@
 require("toggleterm").setup({
-  open_mapping = "<leader>t",
+  open_mapping = "<leader><Space>t",
   hide_numbers = true, -- hide the number column in toggleterm buffers
   shade_filetypes = {},
   start_in_insert = true,
