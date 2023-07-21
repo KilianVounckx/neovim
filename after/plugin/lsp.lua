@@ -3,9 +3,9 @@ local lsp = require('lsp-zero')
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-	"hls",
 	"lua_ls",
 	"rust_analyzer",
+    "wgsl_analyzer",
 	"zls",
 })
 
