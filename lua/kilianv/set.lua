@@ -36,3 +36,4 @@ vim.opt.listchars = "eol:↵,tab:→·,lead:·,trail:·,nbsp:⍽,extends:◣,pre
 vim.opt.timeout = false
 
 vim.cmd("au BufRead,BufNewFile *.roc set filetype=roc")
+vim.cmd("au BufRead,BufNewFile *.vale set filetype=vale")
