@@ -1,7 +1,13 @@
+-- Quick back to normal mode
 vim.keymap.set("i", "jk", "<esc>")
 
+-- Easier undo
 vim.keymap.set("n", "U", "<C-r>")
 
+-- Open file explorer
+vim.keymap.set("n", "<leader>e", ":Explore<cr>")
+
+-- Easier window switching
 vim.keymap.set("n", "J", "<C-w>j")
 vim.keymap.set("n", "K", "<C-w>k")
 vim.keymap.set("n", "H", "<C-w>h")
