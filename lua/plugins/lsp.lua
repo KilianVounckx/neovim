@@ -59,10 +59,10 @@ return {
             lsp_zero.extend_lspconfig()
 
             lsp_zero.set_sign_icons({
-                error = '✘',
-                warn = '▲',
-                hint = '⚑',
-                info = '»',
+                error = '❌',
+                warn = '⚠️',
+                hint = '💡',
+                info = 'ℹ️',
             })
 
             --- if you want to know more about lsp-zero and mason.nvim
