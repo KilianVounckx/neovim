@@ -34,3 +34,5 @@ vim.opt.list = true
 vim.opt.listchars = "eol:↵,tab:→·,lead:·,trail:·,nbsp:⍽,extends:◣,precedes:◢"
 
 vim.opt.timeout = false
+
+vim.filetype.add({ extension = { ua = "uiua" } })
