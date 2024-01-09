@@ -81,6 +81,13 @@ return {
                 vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
                 vim.keymap.set("n", "<leader>sh", function() vim.lsp.buf.signature_help() end, opts)
                 vim.keymap.set("n", "<leader>ff", function() vim.lsp.buf.format() end, opts)
+
+                -- format on save
+                vim.api.nvim_create_autocmd('BufWritePost', {
+                    callback = function(_)
+                        vim.lsp.buf.format()
+                    end,
+                })
             end)
 
             require('mason-lspconfig').setup({
