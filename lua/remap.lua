@@ -2,7 +2,12 @@ vim.keymap.set("i", "jk", "<esc>")
 
 vim.keymap.set("n", "U", "<C-r>")
 
--- Move linew with J and K in visual mode
+vim.keymap.set("n", "J", "<C-w>j")
+vim.keymap.set("n", "K", "<C-w>k")
+vim.keymap.set("n", "H", "<C-w>h")
+vim.keymap.set("n", "L", "<C-w>l")
+
+-- Move line with J and K in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
