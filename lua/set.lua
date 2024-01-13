@@ -37,3 +37,5 @@ vim.opt.timeout = false
 
 vim.filetype.add({ extension = { ua = "uiua" } })
 vim.filetype.add({ extension = { bqn = "bqn" } })
+
+vim.opt.shell = "/home/kilianvounckx/.local/opt/cargo/bin/nu"
