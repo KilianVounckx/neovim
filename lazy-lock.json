@@ -6,6 +6,7 @@
   "lsp-zero.nvim": { "branch": "v3.x", "commit": "433db11e818d07a5151e2c750ca8f09cc2aa3146" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "0989bdf4fdf7b5aa4c74131d7ffccc3f399ac788" },
   "mason.nvim": { "branch": "main", "commit": "e110bc3be1a7309617cecd77bfe4bf86ba1b8134" },
+  "nvim": { "branch": "main", "commit": "f288876c6d05d3bb91b0e72b8031fe9e26ef05b8" },
   "nvim-bqn": { "branch": "master", "commit": "52d8b49f3ebc32d340e2e2b8dba1f6bbd1873b78" },
   "nvim-cmp": { "branch": "main", "commit": "538e37ba87284942c1d76ed38dd497e54e65b891" },
   "nvim-lspconfig": { "branch": "master", "commit": "796394fd19fb878e8dbc4fd1e9c9c186ed07a5f4" },
@@ -16,7 +17,6 @@
   "sudoku.nvim": { "branch": "main", "commit": "c7dfd2f9fc7108ef3832a02f40a76ab1b2d940ce" },
   "telescope.nvim": { "branch": "master", "commit": "d90956833d7c27e73c621a61f20b29fdb7122709" },
   "toggleterm.nvim": { "branch": "main", "commit": "e3805fed94d487b81e9c21548535cc820f62f840" },
-  "tokyonight.nvim": { "branch": "main", "commit": "f247ee700b569ed43f39320413a13ba9b0aef0db" },
   "vim-be-good": { "branch": "master", "commit": "c290810728a4f75e334b07dc0f3a4cdea908d351" },
   "vim-snake": { "branch": "master", "commit": "e8775b18026e099478a4da1300a66775ed4e8392" }
 }
