@@ -22,7 +22,12 @@ vim.keymap.set("x", "<leader>p", "\"_dP", { desc = "Paste without changing regis
 vim.keymap.set("n", "<leader>d", "\"_d", { desc = "Delete without changing register" })
 vim.keymap.set("v", "<leader>d", "\"_d", { desc = "Delete without changing register" })
 
+-- Better indenting
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+vim.keymap.set("n", "<", "<<")
+vim.keymap.set("n", ">", ">>")
+
 -- I don't like macros
 vim.keymap.set("n", "q", "<nop>")
 vim.keymap.set("n", "Q", "<nop>")
-
