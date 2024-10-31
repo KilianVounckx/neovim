@@ -1,4 +1,5 @@
 {
+  "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
   "Coqtail": { "branch": "main", "commit": "299d0acdb9b697fd951df81a5d67e3f5cb6ed4f9" },
   "catppuccin": { "branch": "main", "commit": "65bf0b16f57a3db70d6a93ac68882dd9a31d0565" },
   "coq-lsp.nvim": { "branch": "main", "commit": "6135ed25fc2a1b4b1b6451ed206dc38b493ff1a2" },
