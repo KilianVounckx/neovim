@@ -28,8 +28,6 @@ local lua_ls = {
     },
 }
 
-local coq_lsp = {}
-
 local function on_attach(event)
         local function opts_with(opts)
             local result = { buffer = event.buf }
@@ -90,7 +88,6 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
         require("lspconfig").lua_ls.setup(lua_ls)
-        require("lspconfig").coq_lsp.setup(coq_lsp)
 
         vim.api.nvim_create_autocmd("LspAttach", {
             desc = "LSP Actions",
