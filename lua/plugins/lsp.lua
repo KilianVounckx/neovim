@@ -28,6 +28,9 @@ local lua_ls = {
     },
 }
 
+local typst_lsp = {}
+local tinymist = {}
+
 local function on_attach(event)
         local function opts_with(opts)
             local result = { buffer = event.buf }
@@ -123,8 +126,14 @@ return {
             local lspconfig = require("lspconfig")
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            lua_ls.capabilities = capabilities
-            lspconfig.lua_ls.setup(lua_ls)
+            local function setup(lsp, cfg)
+                cfg.capabilities = capabilities
+                lspconfig[lsp].setup(cfg)
+            end
+
+            setup("lua_ls", lua_ls)
+            setup("tinymist", tinymist)
+            setup("typst_lsp", typst_lsp)
 
             vim.api.nvim_create_autocmd("LspAttach", {
                 desc = "LSP Actions",
