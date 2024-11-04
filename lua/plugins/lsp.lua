@@ -85,13 +85,51 @@ local function on_attach(event)
 end
 
 return {
-    "neovim/nvim-lspconfig",
-    config = function()
-        require("lspconfig").lua_ls.setup(lua_ls)
+    {
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+            { 'L3MON4D3/LuaSnip' },
+        },
+        event = "InsertEnter",
+        config = function()
+            local cmp = require("cmp")
+            local cmp_select = { behavior = cmp.SelectBehavior.Select }
+            cmp.setup({
+                snippet = {
+                    expand = function(args)
+                        require("luasnip").lsp_expand(args.body)
+                    end,
+                },
+                mapping = cmp.mapping.preset.insert({
+                    ["<S-tab>"] = cmp.mapping.select_prev_item(cmp_select),
+                    ["<tab>"] = cmp.mapping.select_next_item(cmp_select),
+                    ["<cr>"] = cmp.mapping.confirm({ select = false }),
+                }),
+                sources = cmp.config.sources({
+                    { name = "nvim_lsp" },
+                    { name = "luasnip" },
+                }, {
+                    { name = "buffer" },
+                }),
+            })
+        end,
+    },
+    {
+        "neovim/nvim-lspconfig",
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+        },
+        config = function()
+            local lspconfig = require("lspconfig")
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-        vim.api.nvim_create_autocmd("LspAttach", {
-            desc = "LSP Actions",
-            callback = on_attach,
-        })
-    end,
+            lua_ls.capabilities = capabilities
+            lspconfig.lua_ls.setup(lua_ls)
+
+            vim.api.nvim_create_autocmd("LspAttach", {
+                desc = "LSP Actions",
+                callback = on_attach,
+            })
+        end,
+    },
 }
