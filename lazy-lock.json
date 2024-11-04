@@ -10,5 +10,6 @@
   "nvim-lspconfig": { "branch": "master", "commit": "54617a18f4cf46f0c2f6d024fa6feb7515fe036d" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
   "telescope.nvim": { "branch": "master", "commit": "85922dde3767e01d42a08e750a773effbffaea3e" },
+  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "which-key.nvim": { "branch": "main", "commit": "8badb359f7ab8711e2575ef75dfe6fbbd87e4821" }
 }
