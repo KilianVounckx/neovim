@@ -1,3 +1,5 @@
+local hls = {}
+
 local lua_ls = {
     on_init = function(client)
         if client.workspace_folders then
@@ -28,8 +30,8 @@ local lua_ls = {
     },
 }
 
-local typst_lsp = {}
 local tinymist = {}
+local typst_lsp = {}
 
 local function on_attach(event)
         local function opts_with(opts)
@@ -131,6 +133,7 @@ return {
                 lspconfig[lsp].setup(cfg)
             end
 
+            setup("hls", hls)
             setup("lua_ls", lua_ls)
             setup("tinymist", tinymist)
             setup("typst_lsp", typst_lsp)
