@@ -30,6 +30,8 @@ local lua_ls = {
     },
 }
 
+local roc_ls = {}
+
 local rust_analyzer = {
     settings = {
         ["rust-analyzer"] = {
@@ -145,6 +147,7 @@ return {
 
             setup("hls", hls)
             setup("lua_ls", lua_ls)
+            setup("roc_ls", roc_ls)
             setup("rust_analyzer", rust_analyzer)
             setup("tinymist", tinymist)
             setup("typst_lsp", typst_lsp)
