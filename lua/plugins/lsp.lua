@@ -1,3 +1,5 @@
+local bqnlsp = {}
+
 local hls = {}
 
 local lua_ls = {
@@ -99,6 +101,11 @@ local function on_attach(event)
         "<cmd>lua vim.lsp.buf.code_action()<cr>",
         opts_with({ desc = "Show actions" })
     )
+    vim.keymap.set(
+        "n", "<leader>e",
+        "<cmd>lua vim.diagnostic.open_float(nil, { focusable = true })<cr>",
+        opts_with({ desc = "Show diagnostic" })
+    )
 end
 
 return {
@@ -145,6 +152,7 @@ return {
                 lspconfig[lsp].setup(cfg)
             end
 
+            setup("bqnlsp", bqnlsp)
             setup("hls", hls)
             setup("lua_ls", lua_ls)
             setup("roc_ls", roc_ls)

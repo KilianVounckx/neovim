@@ -38,3 +38,9 @@ vim.opt.whichwrap:append({
     ["h"] = true,
     ["l"] = true,
 })
+
+vim.filetype.add({
+    extension = {
+        bqn = "bqn",
+    },
+})
